@@ -17,7 +17,7 @@ struct ContentView: View {
 
     @State private var currentLetter: String = "" {
         didSet {
-            guard oldValue != currentLetter, !currentLetter.isEmpty else { return }
+            guard !currentLetter.isEmpty else { return }
             speak(currentLetter)
         }
     }
